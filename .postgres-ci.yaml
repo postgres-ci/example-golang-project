@@ -1,0 +1,10 @@
+images:
+  - golang:1.5-alpine
+  - golang:1.6-alpine
+entrypoint:
+  - /sbin/init
+commands:
+  - go version
+  - echo ==== Run tests ====
+tests:
+  - go test -v -bench .
